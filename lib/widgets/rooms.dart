@@ -15,8 +15,19 @@ class Rooms extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.symmetric(horizontal: 10.0),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(20.0),
+        boxShadow: const [
+          BoxShadow(
+            color: Colors.black12,
+            offset: Offset(0.0, 2.0),
+            blurRadius: 6.0,
+          ),
+        ],
+      ),
       height: 60.0,
-      color: Colors.white,
       child: ListView.builder(
         padding: const EdgeInsets.symmetric(
           vertical: 10.0,
@@ -59,7 +70,10 @@ class _CreateRoomButton extends StatelessWidget {
         color: Colors.blueAccent,
       ),
       textColor: Palette.facebookBlue,
-      child: Text('Etudiants\nen ligne'),
+      child: Text(
+        'Etudiants\nen ligne',
+        textAlign: TextAlign.center,
+      ),
     );
   }
 }

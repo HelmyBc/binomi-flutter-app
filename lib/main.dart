@@ -3,7 +3,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'config/palette.dart';
 import 'screens/home_screen.dart';
 
 void main() {
