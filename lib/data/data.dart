@@ -3,8 +3,7 @@ import 'package:binomi/models/models.dart';
 User currentUser = const User(
     name: 'Helmy Bouchiha',
     imageUrl: 'assets/images/my_image_low.jpg',
-    university: 'enetcom'
-    // 'https://images.unsplash.com/photo-1633903695412-b677f890cd4f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=880&q=80',
+    university: 'ENET\'Com'
     );
 
 final List<User> onlineUsers = [
@@ -13,9 +12,9 @@ final List<User> onlineUsers = [
       imageUrl: 'assets/images/user10.jpg',
       university: 'enetcom'),
   const User(
-      name: 'Jane Doe',
+      name: 'Hamdi Hadda',
       imageUrl: 'assets/images/user9.jpg',
-      university: 'enetcom'),
+      university: 'Sup\'com'),
   const User(
       name: 'Matthew Hinkle',
       imageUrl: 'assets/images/user8.jpg',
@@ -29,9 +28,9 @@ final List<User> onlineUsers = [
       imageUrl: 'assets/images/user6.jpg',
       university: 'enetcom'),
   const User(
-      name: 'Carolyn Duncan',
+      name: 'Ilyess Ben Samir',
       imageUrl: 'assets/images/user5.jpg',
-      university: 'enetcom'),
+      university: 'Iset Rades'),
   const User(
       name: 'Paul Pinnock',
       imageUrl: 'assets/images/user4.jpg',
@@ -90,48 +89,14 @@ final List<User> onlineUsers = [
       university: 'enetcom'),
 ];
 
-final List<Story> stories = [
-  Story(
-    user: onlineUsers[2],
-    imageUrl: 'assets/images/user10.jpg',
-  ),
-  Story(
-    user: onlineUsers[6],
-    imageUrl: 'assets/images/user10.jpg',
-    isViewed: true,
-  ),
-  Story(
-    user: onlineUsers[3],
-    imageUrl: 'assets/images/user10.jpg',
-  ),
-  Story(
-    user: onlineUsers[9],
-    imageUrl: 'assets/images/user10.jpg',
-    isViewed: true,
-  ),
-  Story(
-    user: onlineUsers[7],
-    imageUrl: 'assets/images/user10.jpg',
-  ),
-  Story(
-    user: onlineUsers[2],
-    imageUrl: 'assets/images/user10.jpg',
-  ),
-  Story(
-    user: onlineUsers[6],
-    imageUrl: 'assets/images/user10.jpg',
-    isViewed: true,
-  ),
-];
-
 final List<Post> posts = [
   Post(
     user: currentUser,
     caption:
-        'Aaslema ness lkol fel workshop hedhy nshallah nekhdmou khedma mezyena mabaadhna sne.',
+        'Dear Microsoft members, much work is awaiting for you this year, WORK HARD.',
     timeAgo: '58m',
     imageUrl: 'assets/images/post1.jpg',
-    likes: 1202,
+    interested: 1202,
     comments: 184,
     shares: 96,
   ),
@@ -141,7 +106,7 @@ final List<Post> posts = [
         'Please enjoy this placeholder text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     timeAgo: '3hr',
     imageUrl: '',
-    likes: 683,
+    interested: 683,
     comments: 79,
     shares: 18,
   ),
@@ -150,7 +115,7 @@ final List<Post> posts = [
     caption: 'This is a very good boi.',
     timeAgo: '8hr',
     imageUrl: 'assets/images/post2.jpg',
-    likes: 894,
+    interested: 894,
     comments: 201,
     shares: 27,
   ),
@@ -159,7 +124,7 @@ final List<Post> posts = [
     caption: 'Adventure 🏔',
     timeAgo: '15hr',
     imageUrl: 'assets/images/post3.jpg',
-    likes: 722,
+    interested: 722,
     comments: 183,
     shares: 42,
   ),
@@ -169,7 +134,7 @@ final List<Post> posts = [
         'More placeholder text for the soul: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     timeAgo: '1d',
     imageUrl: '',
-    likes: 482,
+    interested: 482,
     comments: 37,
     shares: 9,
   ),
@@ -178,7 +143,7 @@ final List<Post> posts = [
     caption: 'A classic.',
     timeAgo: '1d',
     imageUrl: 'assets/images/post4.jpg',
-    likes: 1523,
+    interested: 1523,
     shares: 129,
     comments: 301,
   )

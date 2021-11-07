@@ -71,17 +71,17 @@ class UserCardContainer extends StatelessWidget {
                     ),
                     Row(
                       children: [
+                        Icon(
+                          Icons.school,
+                          color: Colors.grey[600],
+                          size: 12.0,
+                        ),
                         Text(
-                          '${user.university} • ',
+                          ' • ${user.university} ',
                           style: TextStyle(
                             color: Colors.grey[600],
                             fontSize: 12.0,
                           ),
-                        ),
-                        Icon(
-                          Icons.public,
-                          color: Colors.grey[600],
-                          size: 12.0,
                         )
                       ],
                     ),

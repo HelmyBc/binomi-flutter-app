@@ -85,6 +85,9 @@ class PostContainer extends StatelessWidget {
             )
           else
             const SizedBox.shrink(),
+          const SizedBox(
+            height: 8.0,
+          ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 12.0),
             child: _PostStats(post: post),
@@ -94,10 +97,6 @@ class PostContainer extends StatelessWidget {
     );
   }
 }
-
-
-
-
 
 class _PostHeader extends StatelessWidget {
   final Post post;
@@ -109,7 +108,6 @@ class _PostHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
     return Row(
       children: [
         ProfileAvatar(imageUrl: post.user.imageUrl),
@@ -153,12 +151,6 @@ class _PostHeader extends StatelessWidget {
   }
 }
 
-
-
-
-
-
-
 class _PostStats extends StatelessWidget {
   final Post post;
 
@@ -188,7 +180,7 @@ class _PostStats extends StatelessWidget {
             const SizedBox(width: 4.0),
             Expanded(
               child: Text(
-                '${post.likes}',
+                '${post.interested}',
                 style: TextStyle(
                   color: Colors.grey[600],
                 ),

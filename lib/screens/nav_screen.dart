@@ -1,51 +1,54 @@
-// import 'package:flutter/material.dart';
-// import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:binomi/screens/screens.dart';
+import 'package:binomi/widgets/widgets.dart';
+import 'package:flutter/material.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
-// import 'home_screen.dart';
+class NavScreen extends StatefulWidget {
+  const NavScreen({Key? key}) : super(key: key);
 
-// class NavScreen extends StatefulWidget {
-//   @override
-//   _NavScreenState createState() => _NavScreenState();
-// }
+  @override
+  _NavScreenState createState() => _NavScreenState();
+}
 
-// class _NavScreenState extends State<NavScreen> {
-//   final List<Widget> _screens = [
-//     HomeScreen(),
-//     Scaffold(),
-//     Scaffold(),
-//     Scaffold(),
-//     Scaffold(),
-//     Scaffold(),
-//   ];
-//   final List<IconData> _icons = const [
-//     Icons.home,
-//     Icons.ondemand_video,
-//     MdiIcons.accountCircleOutline,
-//     MdiIcons.accountGroupOutline,
-//     MdiIcons.bellOutline,
-//     Icons.menu,
-//   ];
-//   int _selectedIndex = 0;
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return DefaultTabController(
-//       length: _icons.length,
-//       child: Scaffold(
-//         body: IndexedStack(
-//           index: _selectedIndex,
-//           children: _screens,
-//         ),
-//         bottomNavigationBar: Container(
-//           padding: const EdgeInsets.only(bottom: 12.0),
-//           color: Colors.white,
-//           child: TabBar(
-//             icons: _icons,
-//             selectedIndex: _selectedIndex,
-//             onTap: (index) => setState(() => _selectedIndex = index),
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
+class _NavScreenState extends State<NavScreen> {
+  final List<Widget> _screens = [
+    HomeScreen(),
+    PeopleScreen(),
+    CurrentProfileScreen(),
+    Scaffold(),
+    Scaffold(),
+  ];
+  int _selectedIndex = 0;
+  final List<IconData> _icons = [
+    Icons.home,
+    MdiIcons.accountGroupOutline,
+    MdiIcons.accountCircleOutline,
+    MdiIcons.bellOutline,
+    Icons.menu
+  ];
+  @override
+  Widget build(BuildContext context) {
+    return DefaultTabController(
+      length: _icons.length,
+      child: Scaffold(
+        body: TabBarView(
+          // index: _selectedIndex,
+          children: _screens,
+        ),
+        ////Ican use indexedStack instead it maintain screens positions and avoid rendering
+        // body: TabBarView(
+        //   // physics: const NeverScrollableScrollPhysics(),
+        //   children: _screens,
+        // ),
+        bottomNavigationBar: Padding(
+          padding: const EdgeInsets.only(bottom: 8.0),
+          child: CustomTabBar(
+            icons: _icons,
+            selectedIndex: _selectedIndex,
+            onTap: (index) => setState(() => _selectedIndex = index),
+          ),
+        ),
+      ),
+    );
+  }
+}

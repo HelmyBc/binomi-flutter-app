@@ -1,6 +1,7 @@
 import 'package:binomi/config/palette.dart';
 import 'package:binomi/data/data.dart';
 import 'package:binomi/models/models.dart';
+import 'package:binomi/screens/screens.dart';
 import 'package:binomi/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
@@ -18,10 +19,15 @@ class PeopleScreen extends StatelessWidget {
           SliverAppBar(
             leading: GestureDetector(
               child: IconButton(
-                icon: Icon(Icons.arrow_back),
+                icon: const Icon(Icons.arrow_back),
                 iconSize: 30.0,
                 color: Colors.black,
-                onPressed: () => Navigator.pop(context),
+                onPressed: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => const NavScreen(),
+                  ),
+                ),
               ),
             ),
             backgroundColor: Colors.white,
@@ -44,12 +50,7 @@ class PeopleScreen extends StatelessWidget {
                   color: Colors.transparent, // Button color
                   child: InkWell(
                     splashColor: Colors.grey[200], // Splash color
-                    onTap: () => Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (_) => const PeopleScreen(),
-                      ),
-                    ),
+                    onTap: () => null,
                     child: const SizedBox(
                         width: 56,
                         height: 56,

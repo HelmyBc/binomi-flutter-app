@@ -3,12 +3,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'screens/home_screen.dart';
+import 'config/palette.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-    systemNavigationBarColor: Color(0xFFF3F5F7), // navigation bar color
-    statusBarColor: Colors.white,
+    systemNavigationBarColor: Palette.mainWhite, // navigation bar color
+    statusBarColor: Palette.mainWhite,
+    statusBarIconBrightness: Brightness.dark,
+    statusBarBrightness: Brightness.light,
     // Color(0xFFF3F5F7), // status bar color
   ));
   runApp(const MyApp());
@@ -28,7 +30,7 @@ class MyApp extends StatelessWidget {
         accentColor: Color(0xFFD8ECF1),
         scaffoldBackgroundColor: const Color(0xFFF3F5F7),
       ),
-      home: HomeScreen(),
+      home: const CurrentProfileScreen(),
     );
   }
 }
